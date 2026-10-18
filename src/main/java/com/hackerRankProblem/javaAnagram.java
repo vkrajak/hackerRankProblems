@@ -1,5 +1,6 @@
 package com.hackerRankProblem;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class javaAnagram {
@@ -115,13 +116,15 @@ public class javaAnagram {
              * both strings have exactly the same character frequencies.
              * Otherwise, they are not anagrams.
              */
-            for (int count : frequency) {
-
-                if (count != 0) {
-                    return false;
-                }
-            }
-
-            return true;
+//            for (int count : frequency) {
+//
+//                if (count != 0) {
+//                    return false;
+//                }
+//            }
+//
+//            return true;
+            //using the Stream API
+            return Arrays.stream(frequency).allMatch(x -> x == 0);
         }
 }
